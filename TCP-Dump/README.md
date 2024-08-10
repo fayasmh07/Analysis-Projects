@@ -110,9 +110,9 @@ You must specify the -nn switch again here, as you want to make sure tcpdump doe
 
 This command will run tcpdump with the following options:
 
-`-nn` : Disable port and protocol name lookup.
-`-r` : Read capture data from the named file.
-`-X` : Display the hexadecimal and ASCII output format packet data. Security analysts can analyze hexadecimal and ASCII output to detect patterns or anomalies during malware analysis or forensic analysis.
+- `-nn` : Disable port and protocol name lookup.
+- `-r` : Read capture data from the named file.
+- `-X` : Display the hexadecimal and ASCII output format packet data. Security analysts can analyze hexadecimal and ASCII output to detect patterns or anomalies during malware analysis or forensic analysis.
 
 *Note: Hexadecimal, also known as hex or base 16, uses 16 symbols to represent values, including the digits 0-9 and letters A, B, C, D, E, and F. American Standard Code for Information Interchange (ASCII) is a character encoding standard that uses a set of characters to represent text in digital form.*
 
