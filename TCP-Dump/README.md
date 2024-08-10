@@ -11,9 +11,9 @@
 `sudo tcpdump -i eth0 -v -c5`
 This command will run `tcpdump` with the following options:
 
-`-i eth0`: Capture data specifically from the eth0 interface.
-`-v`: Display detailed packet data.
-`-c5`: Capture 5 packets of data.
+- `-i eth0`: Capture data specifically from the eth0 interface.
+- `-v`: Display detailed packet data.
+- `-c5`: Capture 5 packets of data.
 ![image](https://github.com/user-attachments/assets/a60bb3a6-08cc-44ee-826f-65904792ecae)
 
 ## Exploring network packet details
@@ -43,12 +43,12 @@ The direction of the arrow `(>)` indicates the direction of the traffic flow in 
 
 This command will run tcpdump in the background with the following options:
 
-`-i eth0`: Capture data from the eth0 interface.
-`-nn`: Do not attempt to resolve IP addresses or ports to names.This is best practice from a security perspective, as the lookup data may not be valid. It also prevents malicious actors from being alerted to an investigation.
-`-c9`: Capture 9 packets of data and then exit.
-`port 80`: Filter only port 80 traffic. This is the default HTTP port.
-`-w capture.pcap`: Save the captured data to the named file.
-`&`: This is an instruction to the Bash shell to run the command in the background.
+- `-i eth0`: Capture data from the eth0 interface.
+- `-nn`: Do not attempt to resolve IP addresses or ports to names.This is best practice from a security perspective, as the lookup data may not be valid. It also prevents malicious actors from being alerted to an investigation.
+- `-c9`: Capture 9 packets of data and then exit.
+- `port 80`: Filter only port 80 traffic. This is the default HTTP port.
+- `-w capture.pcap`: Save the captured data to the named file.
+- `&`: This is an instruction to the Bash shell to run the command in the background.
 
 ![image](https://github.com/user-attachments/assets/2371a3e9-53bb-4169-82a5-a0c32d52983d)
 
@@ -56,13 +56,30 @@ This command will run tcpdump in the background with the following options:
 `curl opensource.google.com`
 
 **RESPONSE**
-`<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+```
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
 <TITLE>301 Moved</TITLE></HEAD><BODY>
 <H1>301 Moved</H1>
 The document has moved
 <A HREF="https://opensource.google/">here</A>.
-</BODY></HTML>`
+</BODY></HTML>
+```
+![image](https://github.com/user-attachments/assets/06cd0929-0318-4aac-b80c-d72ece34c456)
 
+3. Verify that packet data has been captured:
+`ls -l capture.pcap`
 
+![image](https://github.com/user-attachments/assets/b87f7e67-894d-43ba-b4b0-e324b5044c90)
+
+# Task 4. Filter the captured packet data
+
+1. Use the `tcpdump` command to filter the packet `header` data from the `capture.pcap` capture file:
+`sudo tcpdump -nn -r capture.pcap -v`
+
+This command will run tcpdump with the following options:
+
+- `-nn`: Disable port and protocol name lookup.
+- `-r`: Read capture data from the named file.
+- `-v`: Display detailed packet data.
 
 
