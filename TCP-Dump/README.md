@@ -1,3 +1,6 @@
+![Designer (2)](https://github.com/user-attachments/assets/263ac620-113a-4954-9dc1-d34bb4be8b71)
+
+
 # Task 1. Identify network interfaces
 
 1.Use `ifconfig` to identify the interfaces that are available:
