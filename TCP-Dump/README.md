@@ -3,13 +3,13 @@
 
 # Task 1. Identify network interfaces
 
-1.Use `ifconfig` to identify the interfaces that are available:
+1. Use `ifconfig` to identify the interfaces that are available:
 
 `sudo ifconfig`
 
 ![image](https://github.com/user-attachments/assets/29ab435f-5c1a-432d-a26f-c05c05d88120)
 
-2.Use `tcpdump` to identify the interface options available for packet capture:
+2. Use `tcpdump` to identify the interface options available for packet capture:
 
 `sudo tcpdump -D`
 
