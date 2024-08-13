@@ -1,5 +1,6 @@
 ![Designer (2)](https://github.com/user-attachments/assets/263ac620-113a-4954-9dc1-d34bb4be8b71)
 
+This Writeup contains the practical work done as a part of **Google Professional Cyber Security Course**.
 
 # Task 1. Identify network interfaces
 
